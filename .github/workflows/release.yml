@@ -28,16 +28,10 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Create tag
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag "build-${{ github.run_number }}"
-          git push origin "build-${{ github.run_number }}"
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+      - name: Release
+        uses: ncipollo/release-action@v1
         with:
-          files: build/libs/*.jar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: build/libs/*.jar
+          tag: build-${{ github.run_number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
