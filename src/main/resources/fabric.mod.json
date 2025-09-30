@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "server-web",
+  "version": "1.0.0",
+  "name": "Server Web",
+  "description": "Fabric server-side mod: web map + chat + commands + auth",
+  "authors": ["realknoname"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "server": [
+      "com.realknoname.serverweb.ServerWeb"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.8"
+  }
+}
