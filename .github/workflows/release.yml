@@ -1,10 +1,12 @@
-name: Build & Release Fabric Mod
-
+name: Build
 on:
   workflow_dispatch:
   push:
     tags:
       - 'v*'
+
+permissions:
+  contents: write
 
 jobs:
   build:
