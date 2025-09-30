@@ -1,6 +1,7 @@
 name: Build & Release Fabric Mod
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*'
