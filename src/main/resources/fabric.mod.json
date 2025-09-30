@@ -9,7 +9,7 @@
   "license": "MIT",
   "environment": "server",
   "entrypoints": {
-    "server": [
+    "main": [
       "com.realknoname.serverweb.ServerWeb"
     ]
   },
