@@ -4,12 +4,16 @@
   "version": "1.0.0",
   "name": "Server Web",
   "description": "Fabric server-side mod: web map + chat + commands + auth",
-  "authors": ["realknoname"],
+  "authors": [
+    {
+      "name": "realknoname",
+    }
+  ],
   "contact": {},
   "license": "MIT",
   "environment": "server",
   "entrypoints": {
-    "main": [
+    "server": [
       "com.realknoname.serverweb.ServerWeb"
     ]
   },
